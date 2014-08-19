@@ -1,0 +1,12 @@
+{
+  "name": "node-restful-mysql",
+  "version": "0.0.1",
+  "description": "Simple RESTful example of connecting to MySQL via Node.js and return JSON to jQuery client-side",
+  "main": "server.js",
+  "author": "steve.mcdonald@enginpost.com",
+  "dependencies": {
+    "body-parser": "^1.6.1",
+    "express": "3.x",
+    "mysql": "2.x"
+  }
+}

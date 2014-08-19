@@ -1,0 +1,20 @@
+#nodes_results{
+	width: 900px;
+}
+tr:nth-child( odd ){
+	background-color: #E5E5E5;
+}
+tr:nth-child( even ){
+	background-color: #D1D1D1;
+}
+td{
+	padding: 10px;
+	vertical-align: top;
+}
+td:nth-child(1){
+	width: 150px;
+	text-align: center;
+}
+th{
+	background-color: #fff;
+}
