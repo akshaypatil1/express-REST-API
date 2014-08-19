@@ -20,7 +20,7 @@ app.configure( function (){
 });
 
 /**
- * All active category
+ * All active list
  */
 
  app.get( '/api/db/list', function ( objRequest, objResponse ){
@@ -37,35 +37,15 @@ app.configure( function (){
             sendError( objResponse, 503, 'error', 'connection', objError );
 
         }else{
-
-            // We have a connection to the database server and db:
-            //      Let's figure out which CONTENT_TYPE they want and build
-            //      the correct QUERY to request from MySQL
-            /*var strQuery = "";
-            switch( objRequest.params.content_type ){
-                case 'category':
-                    strQuery  = "SELECT * FROM music_category where isactive = 1";
-                    break;
-                default :
-                    // We don't know how to handle this kind of CONTENT_TYPE so
-                    // we simply want to blow it up right now
-                    sendError( objResponse, 503, 'error', 'content-type unkown', { code : 'CONTENT-TYPE MISMATCH' } );
-				//---------------------------------------------------------------------------------------------------------
-				
-            }*/
-
-            //Assuming we knew how to handle the CONTENT_TYPE above, we now send the query to MySQL
-            objConnection.query(
+           objConnection.query(
                 'SELECT * FROM list',
                 function ( objError, objRows, objFields ){
                     if( objError ){
-                        
-                        // Couldn't get the query to run, so send JSON with an error message and an HTTP status of 500 (Internal Server Error)
                         sendError( objResponse, 500, 'error', 'query', objError );
                     
                     }else{
                     
-                        // We have query results back, so lets put the results in JSON and return them
+
                         objResponse.send({
                             result      : 'success',
                             //err         : '',
@@ -84,7 +64,7 @@ app.configure( function (){
 });
 
 /**
- * All active category with ID
+ * All active list with ID
  */
 
 
@@ -134,7 +114,7 @@ app.get( '/api/db/list/id/:id', function ( objRequest, objResponse ){
  
 
 /**
- * All active category with ID
+ * All active list with ID
  */
 app.post( '/api/db/list', function ( objRequest, objResponse ){
     // Set response type from text/html to application/json
@@ -198,6 +178,6 @@ function sendError( objResponse, iStatusCode, strResult,  strType, objError ){
     });
 }
 
-/* Start listening on port 3000 */
+/* Start listening on port 3030 */
 app.listen( node_port );
 console.log( "App listening on port " + node_port );
