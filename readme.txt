@@ -22,8 +22,8 @@ Here are the steps to get the example up and running:
 	2.  Go to the databases tab and create a new database:
       		DB name: 	node_js_sample 
       		Type:		utf8_general_ci
-	3.  With the database selected, go to the import tab and browse your computer to find the "sample_content.sql" file and hit "GO".
-	4.  Go to the Query tab and enter "SELECT * FROM sample_content" and hit "GO". You should see 4 rows if you are successful.
+	3.  With the database selected, go to the import tab and browse your computer to find the "node_js_sample.sql" file and hit "GO".
+	4.  Go to the Query tab and enter "SELECT * FROM list" and hit "GO". You should see 2 rows if you are successful.
 	5.  Go back to your MAMP/XAMPP administrative start page and record your MySQL username and password, hostname and server port.
 	6.  Look at the URL of the administrative start page. Does it say something like "localhost:8080". Record the port number after the colon.
 	7.  Edit the server.js file.
@@ -37,12 +37,11 @@ Here are the steps to get the example up and running:
 	14. Open up a terminal window to the folder that contains the server.js file (this should either be an OSX/Linux shell terminal or a Windows GIT Bash).
 	15. Run the command "node server.js" ... it should tell you "App listening on port [ port_number ]".
 	16. Load up a browser and enter the following URL... http://localhost:[the node_port number you gave it here!]
+				in our case load up a browser and enter the following URL 'http://localhost:3030/api/db/list'
 	17. You are now fiddling with the application.
 	18. You can stop the node.js server.js app from running by pressing [ctrl]+[c] in the terminal window.
 
 Tips on learning from the file:
 
 	- 	The server-side code is all contained in the server.js file.
-	- 	The client-side code is all contained in the public/scripts/app.js file. 
 	- 	I recommend you first read through the server.js file to learn how the static pages in the public folder get served up.
-	- 	The app.js file is the client-side jQuery code to call the API you also setup (the API code is also found within the server.js file).
