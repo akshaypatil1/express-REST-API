@@ -35,11 +35,10 @@ Here are the steps to get the example up and running:
 	12. Save those changes to the server.js file.
 	13. Install node.js by visiting http://nodejs.org and pressing the "install" button.
 	14. Open up a terminal window to the folder that contains the server.js file (this should either be an OSX/Linux shell terminal or a Windows GIT Bash).
-	15. Run the command "node server.js" ... it should tell you "App listening on port [ port_number ]".
-	16. Load up a browser and enter the following URL... http://localhost:[the node_port number you gave it here!]
+	15. Load up a browser and enter the following URL... http://localhost:[the node_port number you gave it here!]
 				in our case load up a browser and enter the following URL 'http://localhost:3030/api/db/list'
-	17. You are now fiddling with the application.
-	18. You can stop the node.js server.js app from running by pressing [ctrl]+[c] in the terminal window.
+	16. You are now fiddling with the application.
+	17. You can stop the node.js server.js app from running by pressing [ctrl]+[c] in the terminal window.
 
 Tips on learning from the file:
 
